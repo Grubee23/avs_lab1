@@ -1,9 +1,5 @@
-#!/bin/bash
-# ===== ЧАСТЬ 1: дерево каталогов, файлы с содержимым, права доступа =====
-
 cd ~/lab0
 
-# ---------- 1. Создание дерева каталогов ----------
 mkdir -p victor/kitchen/molecular_station
 mkdir -p victor/kitchen/hot_station
 mkdir -p victor/hall
@@ -11,7 +7,6 @@ mkdir -p victor/office
 mkdir -p experiments
 mkdir -p archive_empty
 
-# ---------- 1. Создание файлов с содержимым ----------
 cat > victor/kitchen/molecular_station/foam_recipe << 'EOF'
 Катя готовит свекольную пену для нового блюда
 Лёва проверяет температуру перед подачей
@@ -82,8 +77,6 @@ cat > opening_message << 'EOF'
 Команда собирается на кухне до открытия
 EOF
 
-# ---------- 2. Права доступа ----------
-# числа -> числовой способ, буквы/слова -> символьный способ
 chmod 755 victor
 chmod u=rwx,g=rx,o= victor/kitchen
 chmod 750 victor/kitchen/molecular_station
@@ -103,5 +96,4 @@ chmod 660 experiments/tasting_results
 chmod 700 archive_empty
 chmod u=rw,g=r,o=r opening_message
 
-# ---------- Проверка ----------
 ls -lR ~/lab0
