@@ -1,7 +1,3 @@
-#!/bin/bash
-# ===== ЧАСТЬ 3: поиск и фильтрация, затем удаление =====
-
-# чтобы grep -i и sort правильно работали с русскими буквами
 export LC_ALL=C.UTF-8
 
 cd ~/lab0
@@ -27,7 +23,6 @@ ls -lR ~/lab0 | grep '^l' | sort -r -k9
 echo "===== 4.7 Файлы с двумя жёсткими ссылками ====="
 ls -lRi ~/lab0 | grep -E '^ *[0-9]+ -[^ ]+ +2 ' | sort -n -k1
 
-# ---------- 5. Удаление ----------
 rm experiments/tasting_results
 rm experiments/current_recipe
 rm kitchen_entry
